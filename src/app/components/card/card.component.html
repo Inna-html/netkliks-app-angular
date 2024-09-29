@@ -1,15 +1,13 @@
-<p>card works!</p>
-<a href="./film.html" class="content-cards--item">
+
+<a [routerLink]="['/film', film.id]" class="content-cards--item">
     <div class="content-cards--item-img">
-      <img src="../assets/img/film.jpg" alt="film" />
+      <img [src]="film.image" [alt]="film.title" />
     </div>
 
     <div class="content-cards--item--title">
-      <h5>{{title}},</h5>
-      <span>Interstellar 2015</span>
+      <h5> {{film.title}}, </h5>
+      <span> {{film.original}} </span>
     </div>
-    <p class="content-cards--item--discription">
-      Фантастика, приключения
-    </p>
-    <p class="content-cards--item__rating">7.8</p>
+    <p class="content-cards--item--discription"> {{film.category}} </p>
+    <p class="content-cards--item__rating"> {{film.raiting}} </p>
   </a>

@@ -1,10 +1,11 @@
-
-.content-cards--item {
+:host {
     width: calc((100% - (30 * 2)) / 3 );
-    text-decoration: none;
 }
 
-/*  */
+.content-cards--item {
+    width: 100%;
+    text-decoration: none;
+}
 
 .content-cards--item-img {
     width: 100%;
@@ -57,15 +58,21 @@
 /* #################################################### */
 
 @media (max-width: 991px) {
-    .content-cards--item {
-        width: calc((100% - 30) / 2);
+    :host {
+         width: calc((100% - 30) / 2);
     }
+    /* .content-cards--item {
+       width: 100%;
+    } */
 }
 
 @media (max-width: 480px) {
-    .content-cards--item {
+    :host {
+        width: 100%;
+   }
+    /* .content-cards--item {
         width: 100%;
         min-width: 100%;
-    }
+    } */
 }
 

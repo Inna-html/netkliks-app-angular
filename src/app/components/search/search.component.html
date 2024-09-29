@@ -2,11 +2,13 @@
     <div class="container">
       <div class="search-box">
         <input
+          [value]="searchString"
           id="search-input"
           type="text"
           placeholder="Что хотите посмотреть?"
-        />
-        <button id="search-button">
+          (input)="updateValue($event)"
+          />
+        <button id="search-button" (click)="updateSearch($event)">
           <img src="../assets/img/search.png" alt="search" />
           <span>Найти</span>
         </button>
