@@ -1,1 +1,142 @@
-/* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ##################################################################### */
+
+.container {
+    max-width: 1194px;
+    margin: 0 auto;
+    padding: 0px 24px;
+}
+
+/* ###################################################################### */
+.content {
+    margin-bottom: 94px;
+}
+.content-box {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+.content-main {
+    flex-grow: 1;
+}
+.content-main--title {
+    margin-top: 0;
+    margin-bottom: 25px;
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 29px;
+}
+.content-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/*  */
+
+.content-film {
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    gap: 28px;
+}
+
+.content-film_img {
+    max-width: calc((100% - 28px) / 2);
+    display: flex;
+    justify-content: center;
+}
+.content-film_img img {
+    width: 100%;
+    max-width: 450px;
+}
+.content-film_info {
+    width: calc((100% - 28px) / 2);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 30px;
+}
+.content-film_info--title {
+    display: flex;
+    gap: 4px;
+    margin-bottom: 3px;
+    flex-wrap: wrap;
+}
+.content-film_info--title h1, .content-film_info--title p {
+    font-family: Inter, sans-serif;
+    font-size: 24px;
+    line-height: 29px;
+    margin: 0;
+}
+.content-film_info--title h1 {
+    font-weight: 700;
+}
+.content-film_info--title p {
+    font-weight: 400;
+}
+.content-film_info--disc {
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 400;
+    margin-top: 0;
+    margin-bottom: 2px;
+}
+.content-film_info--text {
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+}
+.content-film_info--rating {
+    color: rgb(4, 163, 30);
+    font-family: Inter, sans-serif;
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 700;
+    margin-top: 0;
+    margin-bottom: 29px;
+}
+.content-film_discrip-controls button {
+    color: rgb(255, 255, 255);
+    font-family: Inter, sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    font-weight: 400;
+    padding: 16px 98px;
+    background: rgb(255, 73, 73);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+    cursor: pointer;
+}
+
+/* media ############################################################### */
+@media (max-width: 991px) {
+    .content-film {
+        flex-direction: column;
+    }
+    .content-film_img {
+        max-width: 100%;
+    }
+    .content-film_info {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .content-box {
+        flex-direction: column;
+    }
+}
