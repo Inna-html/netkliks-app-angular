@@ -9,9 +9,10 @@
 
 .content-cards--item-img {
     width: 100%;
+
     display: block;
 }
-.content-cards--item-img img {
+.content-cards--item img {
     width: 100%;
     max-width: 254px;
     margin-bottom: 12px;
@@ -61,18 +62,28 @@
     :host {
          width: calc((100% - 30) / 2);
     }
-    /* .content-cards--item {
-       width: 100%;
-    } */
+    .content-cards--item img {
+        width: 100%;
+        max-width: 500px;
+        max-height: 350px;
+        margin-bottom: 12px;
+    
+        display: block;
+    }
+}
+
+@media (max-width: 768px) {
+    .content-cards--item img {
+        width: 100%;
+        max-width: 500px;
+        max-height: 400px;
+        margin-bottom: 12px;
+    }
 }
 
 @media (max-width: 480px) {
     :host {
         width: 100%;
    }
-    /* .content-cards--item {
-        width: 100%;
-        min-width: 100%;
-    } */
 }
 
